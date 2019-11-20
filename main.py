@@ -7,15 +7,19 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-# # this the home page, using /home
 class MainPage(webapp2.RequestHandler):
     def get(self):
         main_template = the_jinja_env.get_template('templates/index.html')
         self.response.headers['Content-Type'] = 'html'
         self.response.write(main_template.render())
-
     def post(self):
         pass
+
+class AboutPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/about.html')
+        self.response.headers['Content-Type'] = 'html'
+        self.response.write(about_template.render())
 
 class ColePage(webapp2.RequestHandler):
     def get(self):
@@ -43,6 +47,7 @@ class AspenPage(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/about', AboutPage),
     ('/liv', LivPage),
     ('/cole', ColePage),
     ('/charlie', CharliePage),
