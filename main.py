@@ -15,6 +15,12 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
         pass
 
+class FirstPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/fightersround1.html')
+        self.response.headers['Content-Type'] = 'html'
+        self.response.write(about_template.render())
+
 class AboutPage(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('templates/about.html')
@@ -48,6 +54,7 @@ class AspenPage(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/about', AboutPage),
+    ('/fightersroundone', FirstPage),
     ('/liv', LivPage),
     ('/cole', ColePage),
     ('/charlie', CharliePage),

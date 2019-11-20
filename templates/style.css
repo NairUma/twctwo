@@ -1,11 +1,19 @@
 /* #id .class */
+/* general */
+
 /*charlie*/
 #charlie {
   color: #e7be37;
+  font-weight: bold;
 }
 
 .ion {
   font-family: monospace;
+  line-height: 2.0;
+}
+
+#special1 {
+  line-height: 15.0;
 }
 /*liv*/
 #liv {
