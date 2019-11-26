@@ -1,0 +1,48 @@
+/* #id .class */
+
+/* general */
+body {
+  background-color: black;
+}
+
+/*charlie*/
+#charlie {
+  color: #e7be37;
+  font-weight: bold;
+}
+
+.ion {
+  font-family: monospace;
+  line-height: 2.0;
+}
+
+#special1 {
+  line-height: 15.0;
+}
+/*liv*/
+#liv {
+  color: #D81B60;
+  font-weight: bold;
+}
+
+.elliene {
+  font-family: monospace;
+}
+/*aspen*/
+#aspen {
+  color: #A93226;
+  font-weight:bold;
+}
+
+.wesley {
+  font-family: sans-serif;
+}
+
+/*cole*/
+#cole {
+  color: #229954;
+  font-weight: bold;
+}
+ .cayol {
+   font-family: sans-serif;
+ }
