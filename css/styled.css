@@ -5,6 +5,15 @@
   color: black;
 }
 
+#video {
+  length: 1fr;
+  height: 1fr;
+}
+
+#special1 {
+  line-height: 15.0;
+}
+
 /*charlie*/
 #charlie {
   color: #e7be37;
@@ -14,10 +23,6 @@
 .ion {
   font-family: monospace;
   line-height: 2.0;
-}
-
-#special1 {
-  line-height: 15.0;
 }
 /*liv*/
 #liv {
