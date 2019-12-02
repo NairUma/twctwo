@@ -33,6 +33,12 @@ class ThirdPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'html'
         self.response.write(about_template.render())
 
+class HelloPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/helloworld.html')
+        self.response.headers['Content-Type'] = 'html'
+        self.response.write(about_template.render())
+
 class AboutPage(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('templates/about.html')
@@ -70,6 +76,7 @@ app = webapp2.WSGIApplication([
     ('/wesley', SecondPage),
     ('/elliene', SecondPage),
     ('/strawberry', ThirdPage),
+    ('/helloworld', HelloPage),
     ('/liv', LivPage),
     ('/cole', ColePage),
     ('/charlie', CharliePage),
